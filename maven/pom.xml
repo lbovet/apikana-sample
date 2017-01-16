@@ -9,7 +9,6 @@
     <version>0.0.1-SNAPSHOT</version>
 
     <properties>
-        <current.version>v1</current.version>
         <javaPackage>apikana/sample</javaPackage>
     </properties>
 
@@ -20,7 +19,7 @@
                 <artifactId>jsonschema2pojo-maven-plugin</artifactId>
                 <version>0.4.7</version>
                 <configuration>
-                    <sourceDirectory>${basedir}/target/json-schema-v3/${current.version}</sourceDirectory>
+                    <sourceDirectory>${basedir}/target/model/json-schema-v3</sourceDirectory>
                     <targetPackage>${javaPackage}</targetPackage>
                     <includeJsr303Annotations>true</includeJsr303Annotations>
                     <useJodaDates>true</useJodaDates>
