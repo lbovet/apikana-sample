@@ -19,7 +19,7 @@
                 <artifactId>jsonschema2pojo-maven-plugin</artifactId>
                 <version>0.4.7</version>
                 <configuration>
-                    <sourceDirectory>${basedir}/target/model/json-schema-v3</sourceDirectory>
+                    <sourceDirectory>${basedir}/target/api/model/json-schema-v3</sourceDirectory>
                     <targetPackage>${javaPackage}</targetPackage>
                     <includeJsr303Annotations>true</includeJsr303Annotations>
                     <useJodaDates>true</useJodaDates>
@@ -47,6 +47,7 @@
                             <nodeVersion>v0.12.2</nodeVersion>
                             <npmVersion>2.7.5</npmVersion>
                             <downloadRoot>http://artifactory.pnet.ch/artifactory/files-local/node/</downloadRoot>
+                            <deploy>false</deploy>
                         </configuration>
                     </execution>
                 </executions>
