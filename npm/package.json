@@ -25,7 +25,7 @@
     "url": "https://github.com/lbovet/apikana-sample/issues"
   },
   "homepage": "https://github.com/lbovet/apikana-sample#readme",
-  "dependencies": {
+  "devDependencies": {
     "apikana": "^0.1.0"
   }
 }
