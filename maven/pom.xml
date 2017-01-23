@@ -8,71 +8,75 @@
     <artifactId>apikana-sample</artifactId>
     <version>0.0.1-SNAPSHOT</version>
 
-    <properties>
-        <javaPackage>apikana/sample</javaPackage>
-    </properties>
+    <packaging>pom</packaging>
+    <modules>
+        <module>apikana-sample-base</module>
+        <module>apikana-sample-dependent</module>
+    </modules>
 
     <build>
-        <plugins>
-            <plugin>
-                <groupId>org.jsonschema2pojo</groupId>
-                <artifactId>jsonschema2pojo-maven-plugin</artifactId>
-                <version>0.4.7</version>
-                <configuration>
-                    <sourceDirectory>${basedir}/target/api/model/json-schema-v3</sourceDirectory>
-                    <targetPackage>${javaPackage}</targetPackage>
-                    <includeJsr303Annotations>true</includeJsr303Annotations>
-                    <useJodaDates>true</useJodaDates>
-                    <generateBuilders>true</generateBuilders>
-                </configuration>
-                <executions>
-                    <execution>
-                        <phase>process-resources</phase>
-                        <goals>
-                            <goal>generate</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
-                <groupId>apikana</groupId>
-                <artifactId>apikana-maven-plugin</artifactId>
-                <version>0.0.1-SNAPSHOT</version>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>generate</goal>
-                        </goals>
-                        <configuration>
-                            <nodeVersion>v0.12.2</nodeVersion>
-                            <npmVersion>2.7.5</npmVersion>
-                            <downloadRoot>http://artifactory.pnet.ch/artifactory/files-local/node/</downloadRoot>
-                            <deploy>false</deploy>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-            <!--<plugin>-->
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.jsonschema2pojo</groupId>
+                    <artifactId>jsonschema2pojo-maven-plugin</artifactId>
+                    <version>0.4.7</version>
+                    <configuration>
+                        <sourceDirectory>${basedir}/target/api/model/json-schema-v3</sourceDirectory>
+                        <targetPackage>${javaPackage}</targetPackage>
+                        <includeJsr303Annotations>true</includeJsr303Annotations>
+                        <useJodaDates>true</useJodaDates>
+                        <generateBuilders>true</generateBuilders>
+                    </configuration>
+                    <executions>
+                        <execution>
+                            <phase>process-resources</phase>
+                            <goals>
+                                <goal>generate</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+                <plugin>
+                    <groupId>apikana</groupId>
+                    <artifactId>apikana-maven-plugin</artifactId>
+                    <version>0.0.1-SNAPSHOT</version>
+                    <executions>
+                        <execution>
+                            <goals>
+                                <goal>generate</goal>
+                            </goals>
+                            <configuration>
+                                <nodeVersion>v0.12.2</nodeVersion>
+                                <npmVersion>2.7.5</npmVersion>
+                                <downloadRoot>http://artifactory.pnet.ch/artifactory/files-local/node/</downloadRoot>
+                                <deploy>false</deploy>
+                            </configuration>
+                        </execution>
+                    </executions>
+                </plugin>
+                <!--<plugin>-->
                 <!--<groupId>com.github.eirslett</groupId>-->
                 <!--<artifactId>frontend-maven-plugin</artifactId>-->
                 <!--<version>1.3</version>-->
                 <!--<executions>-->
-                    <!--<execution>-->
-                        <!--<id>npm install</id>-->
-                        <!--<goals>-->
-                            <!--<goal>npm</goal>-->
-                        <!--</goals>-->
-                        <!--<configuration>-->
-                            <!--<workingDirectory>.</workingDirectory>-->
-                            <!--<environmentVariables>-->
-                                <!--<a>b</a>-->
-                            <!--</environmentVariables>-->
-                            <!--<arguments>&#45;&#45;userconfig .npmrc run apikana</arguments>-->
-                        <!--</configuration>-->
-                    <!--</execution>-->
+                <!--<execution>-->
+                <!--<id>npm install</id>-->
+                <!--<goals>-->
+                <!--<goal>npm</goal>-->
+                <!--</goals>-->
+                <!--<configuration>-->
+                <!--<workingDirectory>.</workingDirectory>-->
+                <!--<environmentVariables>-->
+                <!--<a>b</a>-->
+                <!--</environmentVariables>-->
+                <!--<arguments>&#45;&#45;userconfig .npmrc run apikana</arguments>-->
+                <!--</configuration>-->
+                <!--</execution>-->
                 <!--</executions>-->
-            <!--</plugin>-->
-        </plugins>
+                <!--</plugin>-->
+            </plugins>
+        </pluginManagement>
     </build>
 
     <dependencies>

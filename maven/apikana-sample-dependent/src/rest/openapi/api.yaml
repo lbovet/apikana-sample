@@ -4,14 +4,9 @@ info:
     email: user@all.users
   description: API for users
   title: User API
-  version: @version@
+  version: @project.version@
 paths:
-  /sample/v1/antrittscheck/alarmings/{uuid}/context:
-  /sample/v1/alarmings:
-  /sample/v1/alarmings/{uuid}/status:
-  /sample/v1/alarmings/{uuid}/cancel/req-._uest:
-
-  /sample/v1/users/{id}:
+  /v1/users/{id}:
     get:
       operationId: getUser
       parameters:
@@ -19,7 +14,7 @@ paths:
           in: path
           name: id
           required: true
-          type: integer
+          type: string
       responses:
         200:
           description: ok
@@ -34,7 +29,7 @@ paths:
       summary: Retrieve a user
       tags:
         - user
-  /sample/v1/users:
+  /v1/users:
     get:
       description: bla
       operationId: getUsers
