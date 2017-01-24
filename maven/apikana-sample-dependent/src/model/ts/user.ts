@@ -1,3 +1,5 @@
+import {Company} from "Company";
+
 interface Users {
     count: number
     data: User[]
@@ -12,7 +14,3 @@ interface User {
     company: Company
 }
 
-interface Company {
-    id: number
-    name: string
-}

@@ -9,10 +9,15 @@
     <version>0.0.1-SNAPSHOT</version>
 
     <packaging>pom</packaging>
+
     <modules>
         <module>apikana-sample-base</module>
         <module>apikana-sample-dependent</module>
     </modules>
+
+    <properties>
+        <javaPackage>org.apikana.sample</javaPackage>
+    </properties>
 
     <build>
         <pluginManagement>
@@ -23,7 +28,6 @@
                     <version>0.4.7</version>
                     <configuration>
                         <sourceDirectory>${basedir}/target/api/model/json-schema-v3</sourceDirectory>
-                        <targetPackage>${javaPackage}</targetPackage>
                         <includeJsr303Annotations>true</includeJsr303Annotations>
                         <useJodaDates>true</useJodaDates>
                         <generateBuilders>true</generateBuilders>
@@ -51,6 +55,7 @@
                                 <npmVersion>2.7.5</npmVersion>
                                 <downloadRoot>http://artifactory.pnet.ch/artifactory/files-local/node/</downloadRoot>
                                 <deploy>false</deploy>
+                                <javaPackage>${javaPackage}</javaPackage>
                             </configuration>
                         </execution>
                     </executions>

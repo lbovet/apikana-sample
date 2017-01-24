@@ -12,10 +12,6 @@
 
     <artifactId>apikana-sample-dependent</artifactId>
 
-    <properties>
-        <javaPackage>apikana/sample</javaPackage>
-    </properties>
-
     <build>
         <plugins>
             <plugin>
@@ -28,5 +24,19 @@
             </plugin>
         </plugins>
     </build>
+
+    <dependencies>
+            <!--<dependency>-->
+                <!--<groupId>org.jsonschema2pojo</groupId>-->
+                <!--<artifactId>jsonschema2pojo-maven-plugin</artifactId>-->
+                <!--<version>0.4.7</version>-->
+            <!--</dependency>-->
+
+        <dependency>
+            <groupId>apikana</groupId>
+            <artifactId>apikana-sample-base</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+    </dependencies>
 
 </project>

@@ -12,10 +12,6 @@
 
     <artifactId>apikana-sample-base</artifactId>
 
-    <properties>
-        <javaPackage>apikana/sample</javaPackage>
-    </properties>
-
     <build>
         <plugins>
             <plugin>

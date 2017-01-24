@@ -70,4 +70,5 @@ tags:
   - description: user
     name: user
 tsModels:
+  - ../../../target/model/ts/company.ts
   - ../../model/ts/user.ts
