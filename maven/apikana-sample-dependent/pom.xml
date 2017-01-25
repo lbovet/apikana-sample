@@ -26,11 +26,11 @@
     </build>
 
     <dependencies>
-            <!--<dependency>-->
-                <!--<groupId>org.jsonschema2pojo</groupId>-->
-                <!--<artifactId>jsonschema2pojo-maven-plugin</artifactId>-->
-                <!--<version>0.4.7</version>-->
-            <!--</dependency>-->
+            <dependency>
+                <groupId>org.jsonschema2pojo</groupId>
+                <artifactId>jsonschema2pojo-maven-plugin</artifactId>
+                <version>0.4.7</version>
+            </dependency>
 
         <dependency>
             <groupId>apikana</groupId>

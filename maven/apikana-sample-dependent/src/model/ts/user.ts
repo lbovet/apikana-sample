@@ -1,4 +1,4 @@
-import {Company} from "Company";
+import {Company} from "apikana-sample-base/company";
 
 interface Users {
     count: number
