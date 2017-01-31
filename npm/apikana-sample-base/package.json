@@ -26,6 +26,6 @@
   },
   "homepage": "https://github.com/lbovet/apikana-sample#readme",
   "devDependencies": {
-    "apikana": "^0.1.0"
+    "apikana": "0.1.3"
   }
 }
