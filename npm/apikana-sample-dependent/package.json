@@ -1,0 +1,31 @@
+{
+  "name": "apikana-sample-dependent",
+  "version": "0.1.0",
+  "description": "Integrated tools for REST API design - ｱﾋﾟ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "apikana src dist --javaPackage=apikana.test",
+    "serve": "apikana-serve src dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lbovet/apikana-sample.git"
+  },
+  "keywords": [
+    "REST",
+    "API",
+    "design",
+    "documentation",
+    "contract-first"
+  ],
+  "author": "Laurent Bovet",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/lbovet/apikana-sample/issues"
+  },
+  "homepage": "https://github.com/lbovet/apikana-sample#readme",
+  "dependencies": {
+    "apikana-sample-base":"file:../apikana-sample-base"
+  }
+}
