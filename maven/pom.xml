@@ -25,12 +25,15 @@
                 <plugin>
                     <groupId>org.jsonschema2pojo</groupId>
                     <artifactId>jsonschema2pojo-maven-plugin</artifactId>
-                    <version>0.4.7</version>
+                    <version>0.4.29</version>
                     <configuration>
                         <sourceDirectory>${basedir}/target/api/model/json-schema-v3</sourceDirectory>
                         <includeJsr303Annotations>true</includeJsr303Annotations>
                         <useJodaDates>true</useJodaDates>
+                        <useJodaLocalDates>true</useJodaLocalDates>
+                        <useJodaLocalTimes>true</useJodaLocalTimes>
                         <generateBuilders>true</generateBuilders>
+                        <removeOldOutput>true</removeOldOutput>
                     </configuration>
                     <executions>
                         <execution>

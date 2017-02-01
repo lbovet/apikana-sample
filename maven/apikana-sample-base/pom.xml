@@ -11,6 +11,9 @@
     </parent>
 
     <artifactId>apikana-sample-base</artifactId>
+    <properties>
+        <javaPackage>org.apikana.sample.base</javaPackage>
+    </properties>
 
     <build>
         <plugins>
